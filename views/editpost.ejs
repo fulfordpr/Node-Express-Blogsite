@@ -1,0 +1,13 @@
+<%- include('partials/header.ejs') %>
+
+<h1 class="m-auto text-center
+text-teal-900 font-sans 
+font-bold mt-10 text-6xl w-1/2">Edit Post</h1>
+
+<form action="/save/<%=locals.editArticle.id%>" method="post" class="font-sans 
+font-bold flex-1 flex-column w-1/2 mt-5 mx-auto">
+    <input  class="border-2 rounded " type="text" name="title" placeholder="Title" value="<%=locals.editArticle.title%>">
+    <br>
+    <textarea class="border-2 rounded" name="body" id="postBody" cols="80" rows="10"><%=locals.editArticle.body%></textarea>
+    <button type="submit">Save</button>
+</form>

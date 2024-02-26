@@ -1,0 +1,31 @@
+<%- include('partials/header.ejs') %>
+
+<div class="mt-10 w-2/3 m-auto
+">
+    <h1 class="font-sans 
+    font-bold
+    text-3xl
+    max-w-xl
+    text-teal-900
+    p-3
+    mt-10
+    m-auto
+    block
+    text-center
+    w-3/4"><%= locals.currentArticle.title %> </h1>
+    <br>
+    <br>
+    <p class="font-m w-3/4 m-auto"><%= locals.currentArticle.body %></p>
+
+
+    <br>
+    <form action="/delete/<%=locals.currentArticle.id%>" method="post">
+        <button class="btn bg-teal-900 px-3 rounded-full text-stone-50 text-center font-bold text-m" type="submit">X</button>
+    </form>
+    
+    <form action="/edit/<%=locals.currentArticle.id%>" method="post">
+        <button class="btn bg-teal-900 px-3 rounded-full text-stone-50 text-center font-bold text-m" type="submit">Edit</button>
+    </form>
+    
+
+</div>

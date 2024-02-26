@@ -1,0 +1,36 @@
+<%- include('partials/header.ejs') %>
+
+<div class="mt-10 w-2/3 m-auto">
+    <a class="
+    bg-teal-900
+    font-sans 
+    font-bold
+    text-3xl
+    max-w-xlˀ
+    text-stone-50
+    p-3
+    rounded-full
+    m-auto
+    block
+    text-center
+    w-1/4"
+    href="/newPost"> + New Post</a>
+
+    <br>
+
+    <%if(locals.posts) { %>
+
+        <%locals.posts.forEach((post) => { %>
+            <a class=" font-sans 
+            font-bold
+            w-1/4
+            m-auto
+            block" href="/blog/<%= post.id %>"> <%= post.title %></a>
+            <br>
+        <%})%>
+    <%}%>
+</div>
+    
+
+   
+
